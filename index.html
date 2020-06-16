@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue Intro</title>
+</head>
+<body>
+    <div id="app">
+        <h1 v-bind:style="headerStyle">Hello</h1>
+        <p v-if="age >= 18">{{ msg }}</p>
+        <p v-bind:title="tooltip">Hover over me!</p>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const app = new Vue({
+            el: '#app',
+            data: {
+                msg: 'Hello Vue!',
+                tooltip: 'This is a tooltip message!',
+                headerStyle: 'color:red',
+                seen: true,
+                age: 20
+            }
+        })
+    </script>
+</body>
+</html>
